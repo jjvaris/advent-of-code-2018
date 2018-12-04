@@ -1,8 +1,8 @@
-# advent-2017-node
+# advent-of-code-2018
 
-Some quick and dirty solutions for advent of code 2017 build with node.
+Some quick and dirty solutions for advent of code 2018 build with node.
 
-https://adventofcode.com/2017
+https://adventofcode.com/2018
 
 ## How to run
 
