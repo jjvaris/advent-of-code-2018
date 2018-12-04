@@ -9,7 +9,7 @@ class Advent {
     return fs
       .readFileSync(`./${this.day}/${file}`)
       .toString()
-      .split('\r\n');
+      .split('\n');
   }
 
   logStart(task) {
