@@ -12,8 +12,8 @@ class Advent2 extends Advent {
     for (const line of lines) {
       const letters = {};
       for (const letter of line) {
-        if (letters[letter]) letters[letter] = letters[letter] + 1;
-        else letters[letter] = 1;
+        if (!letters[letter]) letters[letter] = 0;
+        letters[letter]++;
       }
       if (Object.entries(letters).find(([letter, count]) => count === 2))
         twos++;
@@ -24,7 +24,22 @@ class Advent2 extends Advent {
   }
 
   executeSecondAdvent() {
-    const lines = super.getFileLines('input.txt');
+    const lines = super.getFileLines('input2.txt');
+    for (const x of lines) {
+      for (const y of lines) {
+        let differences = 0;
+        for (const i in x) {
+          if (x[i] !== y[i]) differences++;
+        }
+        if (differences === 1) {
+          let answer = '';
+          for (const i in x) {
+            if (x[i] === y[i]) answer += x[i];
+          }
+          return answer;
+        }
+      }
+    }
   }
 }
 
