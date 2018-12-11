@@ -1,0 +1,15 @@
+{
+  "name": "advent-of-code-2018",
+  "version": "1.0.0",
+  "description": "Some quick and dirty solutions for advent of code 2018 build with node.",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.3"
+  },
+  "author": "Jouni Varis",
+  "license": "ISC"
+}

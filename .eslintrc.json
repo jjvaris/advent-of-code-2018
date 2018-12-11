@@ -1,0 +1,9 @@
+{
+  "extends": ["plugin:prettier/recommended"],
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true }]
+  }
+}
