@@ -1,4 +1,4 @@
-const Advent = require("../advent");
+const Advent = require('../advent');
 
 class Advent1 extends Advent {
   constructor(day) {
@@ -6,10 +6,10 @@ class Advent1 extends Advent {
   }
 
   executeFirstAdvent() {
-    const numbers = super.getFileLines("input.txt");
+    const numbers = super.getFileLines('input.txt');
     return numbers.reduce((result, frequency) => {
       const value = parseInt(frequency.substr(1));
-      if (frequency.startsWith("+")) {
+      if (frequency.startsWith('+')) {
         return (result += value);
       }
       return (result -= value);
@@ -17,11 +17,11 @@ class Advent1 extends Advent {
   }
 
   executeSecondAdvent() {
-    const lines = super.getFileLines("input.txt");
+    const lines = super.getFileLines('input.txt');
     let seenFrequencies = { 0: true };
     let currentFrequency = 0;
     for (let i = 0; i < lines.length; ++i) {
-      const value = lines[i].startsWith("-")
+      const value = lines[i].startsWith('-')
         ? parseInt(lines[i].substr(1)) * -1
         : parseInt(lines[i].substr(1));
       currentFrequency += value;
