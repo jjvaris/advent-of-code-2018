@@ -35,7 +35,7 @@ class Solution extends Advent {
   }
 }
 
-function clean(input) {
+const clean = input => {
   let cleanedInput = input;
   for (let i = 0; i < cleanedInput.length; i++) {
     if (/[a-z]/.test(cleanedInput[i])) {
@@ -50,14 +50,14 @@ function clean(input) {
   }
   cleanedInput = cleanedInput.split(' ').join('');
   return cleanedInput !== input ? clean(cleanedInput) : input;
-}
+};
 
-function replaceWithWhitespace(final, i) {
+const replaceWithWhitespace = (final, i) => {
   return final.substr(0, i) + '  ' + final.substr(i + 2);
-}
+};
 
-function removeChar(input, c) {
+const removeChar = (input, c) => {
   return input.replace(new RegExp(`${c}`, 'g'), '');
-}
+};
 
 module.exports = Solution;
