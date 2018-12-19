@@ -49,10 +49,9 @@ class Solution extends Advent {
     return count;
   }
 
-  getMinAndMaxCoordinates(coordinates) {
-    return coordinates.reduce(
-      (minMax, coordinate) => {
-        const [x, y] = coordinate;
+  getMinAndMaxCoordinates() {
+    return this.coordinates.reduce(
+      (minMax, [x, y]) => {
         if (x < minMax.minX) minMax.minX = x;
         if (x > minMax.maxX) minMax.maxX = x;
         if (y < minMax.minY) minMax.minY = y;
@@ -84,12 +83,12 @@ class Solution extends Advent {
     }
     return node;
   }
+
   getSum(x, y) {
-    let sum = 0;
-    for (const [cx, cy] of this.coordinates) {
-      sum += Math.abs(x - cx) + Math.abs(y - cy);
-    }
-    return sum;
+    return this.coordinates.reduce(
+      (sum, [cx, cy]) => sum + (Math.abs(x - cx) + Math.abs(y - cy)),
+      0
+    );
   }
 }
 
